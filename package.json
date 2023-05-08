@@ -51,7 +51,6 @@
     "@storybook/test-runner": "^0.10.0",
     "@storybook/testing-library": "^0.1.0",
     "@testing-library/cypress": "^9.0.0",
-    "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.1",
     "@types/node": "^20.0.0",
