@@ -23,6 +23,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
+      - name: Install pnpm
+        run: npm install -g pnpm
       - run: pnpm ci
       - run: pnpm run build-prod
 
@@ -35,7 +37,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
         with:
           fetch-depth: 0 # Retrieve Git history, needed to verify commits
       - name: Use Node.js ${{ matrix.node-version }}
@@ -43,6 +45,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
+      - name: Install pnpm
+        run: npm install -g pnpm
       - run: pnpm ci
 
       - if: github.event_name == 'pull_request'
