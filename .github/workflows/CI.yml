@@ -23,6 +23,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
+      - name: Install pnpm
+        run: npm install -g pnpm
       - run: pnpm ci
       - run: pnpm run build-prod
 
@@ -43,6 +45,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "pnpm"
+      - name: Install pnpm
+        run: npm install -g pnpm
       - run: pnpm ci
 
       - if: github.event_name == 'pull_request'
