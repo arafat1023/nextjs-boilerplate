@@ -33,11 +33,6 @@ const Sidebar = () => {
               About
             </Link>
           </li>
-          <li>
-            <Link href="/contact" className="hover:text-gray-300">
-              Contact
-            </Link>
-          </li>
           {/* Add more menu items as needed */}
         </ul>
       </nav>
